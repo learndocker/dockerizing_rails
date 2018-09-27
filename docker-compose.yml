@@ -3,6 +3,8 @@ version: '3.4'
 services:
   app:
     image: jfahrer/todomvc:latest
+    build:
+      context: .
     ports:
       - 3000:3000
     environment:
@@ -10,8 +12,6 @@ services:
       - PG_PASSWORD=secret
       - PG_HOST=pg
       - PG_PORT=5432
-    volumes:
-      - ./:/app
 
   pg:
     image: postgres:9.6-alpine

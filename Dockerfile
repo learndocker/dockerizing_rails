@@ -7,4 +7,5 @@ COPY Gemfile* ./
 RUN bundle install
 COPY . .
 
+ENTRYPOINT ["bin/docker-entrypoint.sh"]
 CMD ["rails", "server", "-b", "0.0.0.0"]
