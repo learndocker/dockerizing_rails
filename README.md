@@ -1,8 +1,7 @@
 # Docker/Rails TodoMVC
-## Building the image
+## Get the application up and running
 ```
-docker-compose build
-docker-compse up
+scripts/setup-env.sh
 ```
 
 ## Running the tests
